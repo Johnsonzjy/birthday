@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>生日快乐 - 祝福</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="common.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#ff6b8b',
+                        secondary: '#6a5acd',
+                        accent: '#ffcc00',
+                        dark: '#333333',
+                        light: '#f8f9fa'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-light min-h-screen font-sans">
+    <!-- 祝福页面 -->
+    <div id="wishPage" class="min-h-screen pb-12 bg-gradient-birthday p-4">
+        <div class="container mx-auto">
+            <!-- 页面标题 -->
+            <div class="text-center mb-8 mt-6">
+                <h1 class="text-[clamp(2rem,6vw,3rem)] font-bold text-white text-shadow mb-3 animate-float">生日快乐！</h1>
+                <p id="nameDisplay" class="text-xl text-white/90"></p>
+            </div>
+            
+            <!-- 祝福卡片 -->
+            <div class="max-w-2xl mx-auto glass-card mb-8 card-hover">
+                <div id="wishContent" class="text-center text-lg text-gray-700 space-y-6">
+                    <!-- 祝福内容将通过JavaScript动态生成 -->
+                </div>
+                
+                <!-- 音乐控制按钮 -->
+                <div class="text-center mt-8">
+                    <button id="musicToggle" class="bg-primary/10 hover:bg-primary/20 text-primary px-6 py-2 rounded-full transition-all flex items-center gap-2 mx-auto">
+                        <i class="fa fa-music"></i>
+                        <span>播放生日歌</span>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- 导航按钮 -->
+            <div class="text-center">
+                <button id="toMessagePage" class="btn-secondary mx-auto">
+                    <span>前往留言板</span>
+                    <i class="fa fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 在body结束前添加脚本 -->
+    <script src="config.js"></script>
+    <script src="wish.js"></script>
+</body>
+</html>
