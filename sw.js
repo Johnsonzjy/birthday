@@ -1,16 +1,19 @@
+
 const CACHE_NAME = 'birthday-wish-mobile-v1';
 const urlsToCache = [
-  '/',
-  '/password.html',
-  '/wish.html',
-  '/message.html',
-  '/common.css',
-  '/config.js',
-  '/password.js',
-  '/wish.js',
-  '/message.js'
+  './',
+  './password.html',
+  './wish.html',
+  './message.html',
+  './common.css',
+  './config.js',
+  './password.js',
+  './wish.js',
+  './message.js'
 ];
 
+// 其余代码保持不变
+// ... existing code ...
 // 安装Service Worker
 self.addEventListener('install', (event) => {
   event.waitUntil(
