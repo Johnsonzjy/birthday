@@ -82,7 +82,8 @@ function generateWishes() {
 function toggleMusic() {
     if (!audio) {
         // 使用本地音乐文件替代外部URL
-        audio = new Audio('KugouMusic/欢庆时刻-生日快乐主题曲_爱给网_aigei_com.mp3');
+        audio = new Audio('./KugouMusic/欢庆时刻-生日快乐主题曲_爱给网_aigei_com.mp3');
+        
         audio.loop = true;
     }
     
